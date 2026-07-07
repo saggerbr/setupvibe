@@ -65,6 +65,7 @@ Subset of desktop steps — no Homebrew, no language ecosystems (PHP, Ruby, Pyth
 | `docs/README.md`            | Overview and comparison table of both editions                    |
 | `docs/desktop/en/README.md` | Full desktop edition documentation (14 steps)                     |
 | `docs/server/en/README.md`  | Server edition documentation (9 steps)                            |
+| `docs/en/EXECUTABLES.md`    | Executable helper script documentation (shared by both editions)  |
 | `docs/desktop/en/tmux.md`   | Tmux plugin and keybinding reference (shared by both editions)    |
 | `docs/desktop/en/pm2.md`    | PM2 command and configuration reference (shared by both editions) |
 
@@ -80,6 +81,14 @@ Configuration files deployed by the scripts to the user's home directory:
 | `zshrc-linux.zsh`     | `~/.zshrc` (Linux desktop) | Linuxbrew paths, NPM, system aliases                                          |
 | `zshrc-server.zsh`    | `~/.zshrc` (server)        | Server-specific shell config                                                  |
 | `ecosystem.config.js` | Used with PM2              | PM2 config for two app processes                                              |
+
+### `bin/` Directory
+
+Executable helper scripts deployed by the installers to `~/.setupvibe/bin`:
+
+| File         | Deployed to                    | Purpose                                                                                                 |
+| ------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| `sshcopykey` | `~/.setupvibe/bin/sshcopykey` | Copies the local public SSH key to a remote server using `--host`, `--user`, and optional `--pass` or hidden password prompt |
 
 ## Key Scripting Patterns
 

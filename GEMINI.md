@@ -27,7 +27,10 @@ The project consists of two primary editions:
   - `tmux-server.conf`: Lean tmux config for server environments.
   - `zshrc-*.zsh`: Platform-specific ZSH configurations.
   - `ecosystem.config.js`: PM2 process management configuration.
+- `bin/`: Executable helper scripts deployed by the installers to `~/.setupvibe/bin`.
+  - `sshcopykey`: Copies the local public SSH key to a remote server using `--host`, `--user`, and optional `--pass` or hidden password prompt.
 - `docs/`: Comprehensive documentation in English (`en/`), Portuguese (`pt-br/`), French (`fr/`), and Spanish (`es/`).
+  - `EXECUTABLES.md`: Executable helper script documentation shared by Desktop and Server editions.
 
 ## Usage and Development
 

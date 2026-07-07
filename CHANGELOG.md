@@ -10,6 +10,8 @@ All notable changes to **SetupVibe** are documented in this file.
 
 - New Python and `uv` aliases in Server Edition: `py`, `pyv`, `uvi`, `uvs`, `venv`, and `activate`.
 - Automatic addition of `$HOME/.local/bin` to `.bashrc` in both Desktop and Server editions to ensure tool accessibility in Bash sessions.
+- New `bin/sshcopykey` helper script, installed to `~/.setupvibe/bin/sshcopykey`, to copy the local public SSH key to a remote server with `--host`, `--user`, and optional `--pass` or hidden password prompt.
+- New executable helper documentation in `docs/*/EXECUTABLES.md`.
 
 ### Changed
 

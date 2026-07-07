@@ -564,6 +564,12 @@ Esta é a lista exaustiva de todos os aliases configurados pelo SetupVibe em tod
   - Descrição: Gera nova chave SSH Ed25519.
   - Exemplo: `keygen 'email@x.com'`
 
+- **`sshcopykey`**
+  - Disponibilidade: 🌐 Ambos
+  - Comando: `~/.setupvibe/bin/sshcopykey --host HOST --user USUARIO [--pass SENHA]`
+  - Descrição: Copia sua chave SSH pública para um servidor remoto usando senha inline ou prompt oculto.
+  - Exemplo: `sshcopykey --host 192.0.2.10 --user root --pass 'senha'`
+
 ## Docker
 
 - **`d`**

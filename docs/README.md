@@ -75,6 +75,13 @@ curl -sSL server.setupvibe.dev | bash -s -- --manager
 - [French](desktop/fr/cronboard.md)
 - [Spanish](desktop/es/cronboard.md)
 
+### Executables
+
+- [English](en/EXECUTABLES.md)
+- [Portuguese](pt-br/EXECUTABLES.md)
+- [French](fr/EXECUTABLES.md)
+- [Spanish](es/EXECUTABLES.md)
+
 ## Contributing
 
 We welcome contributions of all sizes! Please read our [Contribution Guide](../CONTRIBUTING.md) to get started.

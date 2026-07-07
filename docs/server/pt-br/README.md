@@ -92,6 +92,7 @@ Pacotes APT:
 - Instala Oh My Zsh (sem interação)
 - Clona `zsh-autosuggestions` e `zsh-syntax-highlighting`
 - Instala o prompt Starship em `~/.local/bin` e aplica o preset **Gruvbox Rainbow**
+- Baixa scripts auxiliares de [`bin/`](../../../bin) para `~/.setupvibe/bin`; veja [Executáveis](../../pt-br/EXECUTABLES.md)
 - Baixa [`conf/zshrc-server.zsh`](../../../conf/zshrc-server.zsh) para `~/.zshrc`
 - Define o ZSH como shell padrão via `chsh`
 
@@ -101,6 +102,7 @@ Pacotes APT:
 | -------------- | ------------------------------------- |
 | `reload`       | `source ~/.zshrc`                     |
 | `zconfig`      | `nano ~/.zshrc`                       |
+| `sshcopykey`   | `sshcopykey --host HOST --user USUARIO [--pass SENHA]` |
 | `update`       | `sudo apt update && sudo apt upgrade` |
 | `ge`           | `gemini --approval-mode=yolo`                                  |
 | `cc`           | `claude --permission-mode=auto --dangerously-skip-permissions` |

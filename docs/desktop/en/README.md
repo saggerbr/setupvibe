@@ -136,6 +136,7 @@ Installed via Homebrew on both platforms.
 - Clones `zsh-autosuggestions` and `zsh-syntax-highlighting` plugins
 - Installs Nerd Fonts: **FiraCode** and **JetBrains Mono** (Homebrew Cask on macOS; downloaded to `~/.local/share/fonts` on Linux)
 - Installs Starship prompt and applies the **Gruvbox Rainbow** preset
+- Downloads helper scripts from [`bin/`](../../../bin) to `~/.setupvibe/bin`; see [Executables](../../en/EXECUTABLES.md)
 - Downloads the appropriate `.zshrc`:
   - macOS → [`conf/zshrc-macos.zsh`](../../../conf/zshrc-macos.zsh)
   - Linux → [`conf/zshrc-linux.zsh`](../../../conf/zshrc-linux.zsh)
@@ -189,6 +190,7 @@ Each platform gets a dedicated `.zshrc`:
 | ---------- | ------------------------------------------------------------------------------------- |
 | `reload`   | `source ~/.zshrc`                                                                     |
 | `zconfig`  | `nano ~/.zshrc`                                                                       |
+| `sshcopykey` | `sshcopykey --host HOST --user USER [--pass PASS]`                                 |
 | `update`   | `brew update && brew upgrade` (macOS) / `sudo apt update && sudo apt upgrade` (Linux) |
 | `brewup`   | `brew update && brew upgrade && brew cleanup`                                         |
 | `ge`       | `gemini --approval-mode=yolo`                                                         |

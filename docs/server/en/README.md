@@ -92,6 +92,7 @@ APT packages:
 - Installs Oh My Zsh (unattended)
 - Clones `zsh-autosuggestions` and `zsh-syntax-highlighting`
 - Installs Starship prompt to `~/.local/bin` and applies the **Gruvbox Rainbow** preset
+- Downloads helper scripts from [`bin/`](../../../bin) to `~/.setupvibe/bin`; see [Executables](../../en/EXECUTABLES.md)
 - Downloads [`conf/zshrc-server.zsh`](../../../conf/zshrc-server.zsh) to `~/.zshrc`
 - Sets ZSH as the default shell via `chsh`
 
@@ -101,6 +102,7 @@ APT packages:
 | -------------- | ------------------------------------- |
 | `reload`       | `source ~/.zshrc`                     |
 | `zconfig`      | `nano ~/.zshrc`                       |
+| `sshcopykey`   | `sshcopykey --host HOST --user USER [--pass PASS]` |
 | `update`       | `sudo apt update && sudo apt upgrade` |
 | `ge`           | `gemini --approval-mode=yolo`         |
 | `cc`           | `claude --permission-mode=auto --dangerously-skip-permissions` |

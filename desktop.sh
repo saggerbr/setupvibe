@@ -468,6 +468,17 @@ safe_download() {
 }
 
 
+install_setupvibe_bin() {
+    echo "Installing SetupVibe helper scripts..."
+    user_do mkdir -p "$REAL_HOME/.setupvibe/bin"
+    if ! safe_download https://raw.githubusercontent.com/promovaweb/setupvibe/main/bin/sshcopykey "$REAL_HOME/.setupvibe/bin/sshcopykey" 500; then
+        return 1
+    fi
+    user_do chmod +x "$REAL_HOME/.setupvibe/bin/sshcopykey"
+    sys_do chown -R "$REAL_USER:$(id -gn $REAL_USER)" "$REAL_HOME/.setupvibe"
+}
+
+
 # --- INSTALLATION STEPS ---
 
 
@@ -1034,6 +1045,8 @@ step_10() {
 
 
 step_11() {
+    install_setupvibe_bin
+
     if $IS_MACOS; then
         # macOS already has zsh as default
         echo "ZSH is default on macOS"
