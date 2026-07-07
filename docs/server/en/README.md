@@ -104,7 +104,6 @@ APT packages:
 | `zconfig`      | `nano ~/.zshrc`                       |
 | `sshcopykey`   | `sshcopykey --host HOST --user USER [--pass PASS]` |
 | `update`       | `sudo apt update && sudo apt upgrade` |
-| `ge`           | `gemini --approval-mode=yolo`         |
 | `cc`           | `claude --permission-mode=auto --dangerously-skip-permissions` |
 | `skl`          | `npx skills list`                     |
 | `skf`          | `npx skills find`                     |
@@ -139,7 +138,6 @@ Installs **Node.js 24** via NodeSource APT repo, then installs globally via `npm
 | Tool               | Package                          |
 | ------------------ | -------------------------------- |
 | Claude Code        | `@anthropic-ai/claude-code`      |
-| Gemini CLI         | `@google/gemini-cli`             |
 | OpenAI Codex       | `@openai/codex`                  |
 | GitHub Copilot CLI | `@githubnext/github-copilot-cli` |
 

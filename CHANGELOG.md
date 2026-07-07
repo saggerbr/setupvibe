@@ -4,6 +4,20 @@ All notable changes to **SetupVibe** are documented in this file.
 
 ---
 
+## [Unreleased]
+
+### Changed
+
+- Updated AI context synchronization to cover only `AGENTS.md` and `CLAUDE.md`.
+- Split agent skills into platform-specific `.codex/skills` and `.claude/skills` folders.
+
+### Removed
+
+- Removed Gemini context and skill files.
+- Removed Gemini CLI from AI tool installation, shell aliases, Spec-Kit aliases, and current documentation.
+
+---
+
 ## [v0.41.6] - 2026-04-05
 
 ### Added

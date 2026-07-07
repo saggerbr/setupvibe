@@ -1,10 +1,6 @@
 ---
 name: bash-scripting
 description: "Bash scripting workflow for creating production-ready shell scripts with defensive patterns, error handling, and testing."
-category: granular-workflow-bundle
-risk: safe
-source: personal
-date_added: "2026-02-27"
 ---
 
 # Bash Scripting Workflow
@@ -13,9 +9,19 @@ date_added: "2026-02-27"
 
 Specialized workflow for creating robust, production-ready bash scripts with defensive programming patterns, comprehensive error handling, and automated testing.
 
+## Platform Notes
+
+This is the Codex version of the skill.
+
+- Use `rg` for discovery and `exec_command` for shell validation.
+- Use `apply_patch` for manual script edits.
+- Use `update_plan` for multi-step script work.
+- Keep this skill functionally aligned with `.claude/skills/bash-scripting`.
+
 ## When to Use This Workflow
 
 Use this workflow when:
+
 - Creating automation scripts
 - Writing system administration tools
 - Building deployment scripts
@@ -27,10 +33,12 @@ Use this workflow when:
 ### Phase 1: Script Design
 
 #### Skills to Invoke
+
 - `bash-pro` - Professional scripting
 - `bash-defensive-patterns` - Defensive patterns
 
 #### Actions
+
 1. Define script purpose
 2. Identify inputs/outputs
 3. Plan error handling
@@ -38,17 +46,20 @@ Use this workflow when:
 5. Document requirements
 
 #### Copy-Paste Prompts
-```
-Use @bash-pro to design production-ready bash script
+
+```text
+Use the `bash-pro` skill to design a production-ready Bash script.
 ```
 
 ### Phase 2: Script Structure
 
 #### Skills to Invoke
+
 - `bash-pro` - Script structure
 - `bash-defensive-patterns` - Safety patterns
 
 #### Actions
+
 1. Add shebang and strict mode
 2. Create usage function
 3. Implement argument parsing
@@ -56,17 +67,20 @@ Use @bash-pro to design production-ready bash script
 5. Add cleanup handlers
 
 #### Copy-Paste Prompts
-```
-Use @bash-defensive-patterns to implement strict mode and error handling
+
+```text
+Use the `bash-defensive-patterns` skill to implement strict mode and error handling.
 ```
 
 ### Phase 3: Core Implementation
 
 #### Skills to Invoke
+
 - `bash-linux` - Linux commands
 - `linux-shell-scripting` - Shell scripting
 
 #### Actions
+
 1. Implement main functions
 2. Add input validation
 3. Create helper functions
@@ -74,17 +88,20 @@ Use @bash-defensive-patterns to implement strict mode and error handling
 5. Add progress indicators
 
 #### Copy-Paste Prompts
-```
-Use @bash-linux to implement system commands
+
+```text
+Use the `bash-linux` skill to implement system commands.
 ```
 
 ### Phase 4: Error Handling
 
 #### Skills to Invoke
+
 - `bash-defensive-patterns` - Error handling
 - `error-handling-patterns` - Error patterns
 
 #### Actions
+
 1. Add trap handlers
 2. Implement retry logic
 3. Create error messages
@@ -92,16 +109,19 @@ Use @bash-linux to implement system commands
 5. Add rollback capability
 
 #### Copy-Paste Prompts
-```
-Use @bash-defensive-patterns to add comprehensive error handling
+
+```text
+Use the `bash-defensive-patterns` skill to add comprehensive error handling.
 ```
 
 ### Phase 5: Logging
 
 #### Skills to Invoke
+
 - `bash-pro` - Logging patterns
 
 #### Actions
+
 1. Create logging function
 2. Add log levels
 3. Implement timestamps
@@ -109,17 +129,20 @@ Use @bash-defensive-patterns to add comprehensive error handling
 5. Add debug mode
 
 #### Copy-Paste Prompts
-```
-Use @bash-pro to implement structured logging
+
+```text
+Use the `bash-pro` skill to implement structured logging.
 ```
 
 ### Phase 6: Testing
 
 #### Skills to Invoke
+
 - `bats-testing-patterns` - Bats testing
 - `shellcheck-configuration` - ShellCheck
 
 #### Actions
+
 1. Write Bats tests
 2. Run ShellCheck
 3. Test edge cases
@@ -127,20 +150,23 @@ Use @bash-pro to implement structured logging
 5. Test with different inputs
 
 #### Copy-Paste Prompts
-```
-Use @bats-testing-patterns to write script tests
+
+```text
+Use the relevant test skill or local test pattern to write script tests.
 ```
 
-```
-Use @shellcheck-configuration to lint bash script
+```text
+Use ShellCheck directly when available to lint Bash scripts.
 ```
 
 ### Phase 7: Documentation
 
 #### Skills to Invoke
+
 - `documentation-templates` - Documentation
 
 #### Actions
+
 1. Add script header
 2. Document functions
 3. Create usage examples
@@ -148,8 +174,9 @@ Use @shellcheck-configuration to lint bash script
 5. Add troubleshooting section
 
 #### Copy-Paste Prompts
-```
-Use @documentation-templates to document bash script
+
+```text
+Use the `documentation` skill to document Bash scripts.
 ```
 
 ## Script Template
@@ -194,6 +221,7 @@ main "$@"
 - `os-scripting` - OS scripting
 - `linux-troubleshooting` - Linux troubleshooting
 - `cloud-devops` - DevOps automation
+
 ---
 
 ## Regra Obrigatória — Markdown

@@ -22,12 +22,6 @@ Esta é a lista exaustiva de todos os aliases configurados pelo SetupVibe em tod
 
 ## AI CLIs
 
-- **`ge`**
-  - Disponibilidade: 🌐 Ambos
-  - Comando: `gemini --approval-mode=yolo`
-  - Descrição: Gemini CLI sem confirmações.
-  - Exemplo: `ge`
-
 - **`cc`**
   - Disponibilidade: 🌐 Ambos
   - Comando: `claude --permission-mode=auto --dangerously-skip-permissions`

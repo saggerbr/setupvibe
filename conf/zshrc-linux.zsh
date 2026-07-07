@@ -45,7 +45,6 @@ if command -v starship >/dev/null; then eval "$(starship init zsh)"; fi
 alias setupvibe="curl -sSL desktop.setupvibe.dev | bash"                      # Reinstala ou atualiza o SetupVibe Desktop
 
 # --- AI CLIs ---
-alias ge="gemini --approval-mode=yolo"                                        # Gemini CLI sem confirmações
 alias cc="claude --permission-mode=auto --dangerously-skip-permissions"        # Claude CLI sem confirmações
 
 # --- Skills CLI ---
@@ -62,7 +61,6 @@ alias spinit="specify init"                     # Inicializa projeto SDD (ex: sp
 alias spcheck="specify check"                   # Verifica se todas as dependências estão instaladas
 alias sphere="specify init --here"              # Inicializa SDD no diretório atual
 alias spci="specify init --here --ai claude"    # Inicia projeto SDD com Claude no diretório atual
-alias spgi="specify init --here --ai gemini"    # Inicia projeto SDD com Gemini no diretório atual
 alias spkpi="specify init --here --ai copilot"  # Inicia projeto SDD com Copilot no diretório atual
 alias spup="uv tool upgrade specify-cli"        # Atualiza o Spec-Kit para a versão mais recente
 

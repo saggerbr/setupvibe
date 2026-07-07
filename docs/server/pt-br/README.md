@@ -104,7 +104,6 @@ Pacotes APT:
 | `zconfig`      | `nano ~/.zshrc`                       |
 | `sshcopykey`   | `sshcopykey --host HOST --user USUARIO [--pass SENHA]` |
 | `update`       | `sudo apt update && sudo apt upgrade` |
-| `ge`           | `gemini --approval-mode=yolo`                                  |
 | `cc`           | `claude --permission-mode=auto --dangerously-skip-permissions` |
 | `skl`          | `npx skills list`                                              |
 | `skf`          | `npx skills find`                                              |
@@ -140,7 +139,6 @@ Instala o **Node.js 24** via repositório NodeSource APT, e então instala globa
 | Ferramenta         | Pacote                           |
 | ------------------ | -------------------------------- |
 | Claude Code        | `@anthropic-ai/claude-code`      |
-| Gemini CLI         | `@google/gemini-cli`             |
 | OpenAI Codex       | `@openai/codex`                  |
 | GitHub Copilot CLI | `@githubnext/github-copilot-cli` |
 

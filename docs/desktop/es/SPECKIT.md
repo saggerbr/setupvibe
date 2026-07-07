@@ -36,9 +36,6 @@ spinit mi-proyecto
 # Inicializa en el directorio actual con Claude
 spci
 
-# Inicializa en el directorio actual con Gemini
-spgi
-
 # Inicializa en el directorio actual con Copilot
 spkpi
 ```
@@ -69,7 +66,7 @@ specify init <NOMBRE_DEL_PROYECTO> [opciones]
 
 | Opción | Descripción |
 |---|---|
-| `--ai <agente>` | Agente de IA a usar: `claude`, `copilot`, `gemini`, `codebuddy`, `pi` |
+| `--ai <agente>` | Agente de IA a usar: `claude`, `copilot`, `codebuddy`, `pi` |
 | `--script <tipo>` | Tipo de script: `sh` (Bash) o `ps` (PowerShell) |
 | `--here` | Inicializa en el directorio actual en lugar de una nueva carpeta |
 | `--offline` | Usa activos integrados sin buscarlos en la red |
@@ -96,7 +93,6 @@ Estos aliases están disponibles después de ejecutar SetupVibe Desktop en macOS
 | `spcheck` | `specify check` | Verifica las dependencias instaladas |
 | `sphere` | `specify init --here` | Inicializa SDD en el directorio actual |
 | `spci` | `specify init --here --ai claude` | Inicia un proyecto SDD con Claude Code |
-| `spgi` | `specify init --here --ai gemini` | Inicia un proyecto SDD con Gemini CLI |
 | `spkpi` | `specify init --here --ai copilot` | Inicia un proyecto SDD con GitHub Copilot |
 | `spup` | `uv tool upgrade specify-cli` | Actualiza Spec-Kit |
 
@@ -145,7 +141,6 @@ Use `/speckit.implement` o trabaje tarea por tarea con su agente de IA, haciendo
 |---|---|---|
 | Claude Code | `--ai claude` | Recomendación predeterminada para usuarios de SetupVibe |
 | GitHub Copilot | `--ai copilot` | Requiere suscripción a Copilot |
-| Gemini CLI | `--ai gemini` | Nivel gratuito disponible |
 | CodeBuddy | `--ai codebuddy` | Asistente de IA de Tencent Cloud |
 | Pi | `--ai pi` | Asistente de IA de Inflection |
 

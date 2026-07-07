@@ -7,6 +7,15 @@ description: Master defensive Bash programming techniques for production-grade s
 
 Comprehensive guidance for writing production-ready Bash scripts using defensive programming techniques, error handling, and safety best practices to prevent common pitfalls and ensure reliability.
 
+## Platform Notes
+
+This is the Codex version of the skill.
+
+- Use `rg` and `sed` for repository inspection.
+- Use `apply_patch` for manual script edits.
+- Use `exec_command` for ShellCheck, syntax checks, and targeted script runs.
+- Keep this skill functionally aligned with `.claude/skills/bash-defensive-patterns`.
+
 ## Use this skill when
 
 - Writing production automation scripts
@@ -41,6 +50,7 @@ Refer to `resources/implementation-playbook.md` for detailed patterns, checklist
 ## Resources
 
 - `resources/implementation-playbook.md` for detailed patterns, checklists, and templates.
+
 ---
 
 ## Regra Obrigatória — Markdown

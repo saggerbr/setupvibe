@@ -157,7 +157,6 @@ Installed globally via `npm install -g`:
 | ------------------ | -------------------------------- |
 | Agentlytics        | `agentlytics`                    |
 | Claude Code        | `@anthropic-ai/claude-code`      |
-| Gemini CLI         | `@google/gemini-cli`             |
 | OpenAI Codex       | `@openai/codex`                  |
 | GitHub Copilot CLI | `@githubnext/github-copilot-cli` |
 
@@ -193,7 +192,6 @@ Each platform gets a dedicated `.zshrc`:
 | `sshcopykey` | `sshcopykey --host HOST --user USER [--pass PASS]`                                 |
 | `update`   | `brew update && brew upgrade` (macOS) / `sudo apt update && sudo apt upgrade` (Linux) |
 | `brewup`   | `brew update && brew upgrade && brew cleanup`                                         |
-| `ge`       | `gemini --approval-mode=yolo`                                                         |
 | `cc`       | `claude --permission-mode=auto --dangerously-skip-permissions`                        |
 | `skl`      | `npx skills list`                                                                     |
 | `skf`      | `npx skills find`                                                                     |

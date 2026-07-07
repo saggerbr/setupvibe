@@ -11,7 +11,7 @@ Apply the SetupVibe Markdown rules to every `.md` file you create or edit, and v
 
 ## Source of Truth
 
-All formatting rules, markdownlint rule IDs, configuration values, and examples are defined in [`MARKDOWN.md`](../../../MARKDOWN.md) at the project root. **Read that file before applying rules.** Do not derive rules from CLAUDE.md or any other file — `MARKDOWN.md` is authoritative.
+All formatting rules, markdownlint rule IDs, configuration values, and examples are defined in [`MARKDOWN.md`](../../../MARKDOWN.md) at the project root. **Read that file before applying rules.** Do not derive rules from `CLAUDE.md`, `AGENTS.md`, or any other file — `MARKDOWN.md` is authoritative.
 
 The markdownlint configuration is in [`.markdownlint.json`](../../../.markdownlint.json).
 
@@ -21,7 +21,7 @@ When invoked, this skill must scan **all** `.md` files in the repository recursi
 
 ### Step 1 — Discover all Markdown files
 
-Use Glob to find every `.md` file in the project:
+Use Claude Code `Glob` to find every `.md` file in the project:
 
 ```text
 Pattern: **/*.md
@@ -29,10 +29,10 @@ Pattern: **/*.md
 
 This includes (but is not limited to):
 
-- Root context files: `CLAUDE.md`, `AGENTS.md`, `GEMINI.md`, `MARKDOWN.md`, `CHANGELOG.md`, `README.md`, `CONTRIBUTING.md`
+- Root context files: `CLAUDE.md`, `AGENTS.md`, `MARKDOWN.md`, `CHANGELOG.md`, `README.md`, `CONTRIBUTING.md`
 - `docs/**/*.md` — all languages (`en/`, `pt-br/`, `es/`, `fr/`) and all subdirectories
-- `.claude/skills/**/*.md` — all skill definitions
-- `.gemini/skills/**/*.md` — all Gemini skill definitions
+- `.claude/skills/**/*.md` — Claude skill definitions
+- `.codex/skills/**/*.md` — Codex skill definitions
 
 ### Step 2 — Check each file against MARKDOWN.md rules
 
@@ -60,7 +60,7 @@ For every file found, verify:
 
 For each violation found:
 
-1. Fix it in place using Edit. Never remove content — format only.
+1. Fix it in place using Claude Code `Edit`. Never remove content — format only.
 2. Table pipes: align columns for raw readability.
 3. Code blocks: detect language from context if missing (`bash`, `zsh`, `js`, `json`, `markdown`, `text`).
 4. List markers: convert `*` and `+` to `-`.

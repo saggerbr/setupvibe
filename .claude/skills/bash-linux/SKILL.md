@@ -8,6 +8,13 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 
 > Essential patterns for Bash on Linux/macOS.
 
+## Platform Notes
+
+This is the Claude Code version of the skill.
+
+- Use `Read`, `Glob`, `Grep`, `Edit`, and `Bash` as allowed by the frontmatter.
+- Keep this skill functionally aligned with `.codex/skills/bash-linux`.
+
 ---
 
 ## 1. Operator Syntax

@@ -1,6 +1,6 @@
 ---
 name: documentation
-description: Workflow mestre para gestão de documentação do SetupVibe. Use ao criar, revisar, traduzir ou sincronizar Markdown, READMEs, CHANGELOG e documentação de steps em Claude Code.
+description: Workflow mestre para gestão de documentação do SetupVibe. Use ao criar, revisar, traduzir ou sincronizar Markdown, READMEs, CHANGELOG e documentação de steps em Codex.
 ---
 
 # Documentation Workflow
@@ -9,17 +9,18 @@ Use esta skill para manter a documentação do SetupVibe sincronizada, traduzida
 
 ## Plataforma
 
-Esta é a versão Claude da skill.
+Esta é a versão Codex da skill.
 
-- Use `Read`, `Glob`, `Grep`, `Edit` e `Bash` conforme necessário.
-- Use a skill `/markdown-format` antes de concluir qualquer tarefa que altere Markdown.
-- Mantenha `.claude/skills` alinhada com `.codex/skills`, preservando instruções específicas de Claude.
+- Use `rg` ou `rg --files` para localizar arquivos e referências.
+- Use `apply_patch` para edições manuais em Markdown.
+- Use `exec_command` para verificações como `git diff`, `markdownlint`, `ls` e `rg`.
+- Mantenha `.codex/skills` alinhada com `.claude/skills`, preservando instruções específicas de Codex.
 
 ## Fonte de Verdade
 
 - Regras de Markdown: [`MARKDOWN.md`](../../../MARKDOWN.md).
 - Configuração markdownlint: [`.markdownlint.json`](../../../.markdownlint.json).
-- Contextos ativos: [`CLAUDE.md`](../../../CLAUDE.md) e [`AGENTS.md`](../../../AGENTS.md).
+- Contextos ativos: [`AGENTS.md`](../../../AGENTS.md) e [`CLAUDE.md`](../../../CLAUDE.md).
 
 ## Fluxo
 
@@ -29,11 +30,11 @@ Esta é a versão Claude da skill.
 4. Use inglês (`docs/en`) como fonte de verdade para traduções.
 5. Não traduza comandos, aliases, nomes de pacote, paths ou variáveis de ambiente.
 6. Verifique links relativos com `ls` ou leitura direta do arquivo de destino.
-7. Rode ou solicite a verificação da skill `/markdown-format`.
+7. Rode a verificação da skill `markdown-format` antes de concluir.
 
 ## Checklist Final
 
 - [ ] Os arquivos alterados seguem `MARKDOWN.md`.
 - [ ] `AGENTS.md` e `CLAUDE.md` continuam sincronizados nas regras compartilhadas.
-- [ ] `.claude/skills` e `.codex/skills` continuam funcionalmente equivalentes.
+- [ ] `.codex/skills` e `.claude/skills` continuam funcionalmente equivalentes.
 - [ ] Não há novas referências a agentes fora de Codex e Claude como contexto ou pasta de skills ativa.

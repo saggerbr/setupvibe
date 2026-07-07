@@ -13,9 +13,18 @@ date_added: "2026-02-27"
 
 Specialized workflow for creating robust, production-ready bash scripts with defensive programming patterns, comprehensive error handling, and automated testing.
 
+## Platform Notes
+
+This is the Claude Code version of the skill.
+
+- Use Claude skill references such as `@bash-pro` and `@bash-defensive-patterns`.
+- Use `Read`, `Grep`, `Edit`, and `Bash` for script work.
+- Keep this skill functionally aligned with `.codex/skills/bash-scripting`.
+
 ## When to Use This Workflow
 
 Use this workflow when:
+
 - Creating automation scripts
 - Writing system administration tools
 - Building deployment scripts
@@ -27,10 +36,12 @@ Use this workflow when:
 ### Phase 1: Script Design
 
 #### Skills to Invoke
+
 - `bash-pro` - Professional scripting
 - `bash-defensive-patterns` - Defensive patterns
 
 #### Actions
+
 1. Define script purpose
 2. Identify inputs/outputs
 3. Plan error handling
@@ -38,17 +49,20 @@ Use this workflow when:
 5. Document requirements
 
 #### Copy-Paste Prompts
-```
+
+```text
 Use @bash-pro to design production-ready bash script
 ```
 
 ### Phase 2: Script Structure
 
 #### Skills to Invoke
+
 - `bash-pro` - Script structure
 - `bash-defensive-patterns` - Safety patterns
 
 #### Actions
+
 1. Add shebang and strict mode
 2. Create usage function
 3. Implement argument parsing
@@ -56,17 +70,20 @@ Use @bash-pro to design production-ready bash script
 5. Add cleanup handlers
 
 #### Copy-Paste Prompts
-```
+
+```text
 Use @bash-defensive-patterns to implement strict mode and error handling
 ```
 
 ### Phase 3: Core Implementation
 
 #### Skills to Invoke
+
 - `bash-linux` - Linux commands
 - `linux-shell-scripting` - Shell scripting
 
 #### Actions
+
 1. Implement main functions
 2. Add input validation
 3. Create helper functions
@@ -74,17 +91,20 @@ Use @bash-defensive-patterns to implement strict mode and error handling
 5. Add progress indicators
 
 #### Copy-Paste Prompts
-```
+
+```text
 Use @bash-linux to implement system commands
 ```
 
 ### Phase 4: Error Handling
 
 #### Skills to Invoke
+
 - `bash-defensive-patterns` - Error handling
 - `error-handling-patterns` - Error patterns
 
 #### Actions
+
 1. Add trap handlers
 2. Implement retry logic
 3. Create error messages
@@ -92,16 +112,19 @@ Use @bash-linux to implement system commands
 5. Add rollback capability
 
 #### Copy-Paste Prompts
-```
+
+```text
 Use @bash-defensive-patterns to add comprehensive error handling
 ```
 
 ### Phase 5: Logging
 
 #### Skills to Invoke
+
 - `bash-pro` - Logging patterns
 
 #### Actions
+
 1. Create logging function
 2. Add log levels
 3. Implement timestamps
@@ -109,17 +132,20 @@ Use @bash-defensive-patterns to add comprehensive error handling
 5. Add debug mode
 
 #### Copy-Paste Prompts
-```
+
+```text
 Use @bash-pro to implement structured logging
 ```
 
 ### Phase 6: Testing
 
 #### Skills to Invoke
+
 - `bats-testing-patterns` - Bats testing
 - `shellcheck-configuration` - ShellCheck
 
 #### Actions
+
 1. Write Bats tests
 2. Run ShellCheck
 3. Test edge cases
@@ -127,20 +153,23 @@ Use @bash-pro to implement structured logging
 5. Test with different inputs
 
 #### Copy-Paste Prompts
-```
+
+```text
 Use @bats-testing-patterns to write script tests
 ```
 
-```
+```text
 Use @shellcheck-configuration to lint bash script
 ```
 
 ### Phase 7: Documentation
 
 #### Skills to Invoke
+
 - `documentation-templates` - Documentation
 
 #### Actions
+
 1. Add script header
 2. Document functions
 3. Create usage examples
@@ -148,7 +177,8 @@ Use @shellcheck-configuration to lint bash script
 5. Add troubleshooting section
 
 #### Copy-Paste Prompts
-```
+
+```text
 Use @documentation-templates to document bash script
 ```
 
@@ -194,6 +224,7 @@ main "$@"
 - `os-scripting` - OS scripting
 - `linux-troubleshooting` - Linux troubleshooting
 - `cloud-devops` - DevOps automation
+
 ---
 
 ## Regra Obrigatória — Markdown

@@ -63,17 +63,18 @@ Ao atualizar a versão (ex: de `0.41.6` para `0.42.0`), você **deve** atualizar
 - `server.sh` (variável `VERSION`)
 - `CHANGELOG.md` (adicionar uma nova entrada)
 - `README.md` (visão geral do projeto na raiz)
-- `GEMINI.md` (visão geral do projeto para o agente)
-- `CLAUDE.md` (visão geral do projeto para o agente)
+- `AGENTS.md` (visão geral do projeto para Codex)
+- `CLAUDE.md` (visão geral do projeto para Claude)
 - Todos os arquivos `README.md` em `docs/` e seus subdiretórios.
 
 ---
 
 ## 🤖 Automação & Skills
 
-Este projeto utiliza **Agent Skills** (localizadas em `.gemini/skills` e `.claude/skills`) para automatizar tarefas.
+Este projeto utiliza **Agent Skills** (localizadas em `.codex/skills` e `.claude/skills`) para automatizar tarefas.
 
 - Se você for um agente de IA, você **deve** ativar as skills relevantes (ex: `markdown-format`, `make-changelog`) antes de realizar tarefas.
+- As skills de Codex e Claude devem permanecer funcionalmente alinhadas, preservando instruções específicas de cada plataforma.
 - Se você for um humano, esteja ciente de que essas skills reforçam os padrões mencionados acima.
 
 ---

@@ -1149,7 +1149,6 @@ step_13() {
     AI_TOOLS=(
         "agentlytics"
         "@anthropic-ai/claude-code"
-        "@google/gemini-cli"
         "@openai/codex"
         "@githubnext/github-copilot-cli"
     )

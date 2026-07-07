@@ -1,17 +1,24 @@
 ---
 name: fix-issue
 description: Workflow completo para investigar, corrigir e fechar issues do repositório promovaweb/setupvibe. Lê a issue no GitHub, cria a branch fix/issue-N, identifica a causa raiz nos scripts, aplica as correções, faz commit e push, e pode postar um comentário na issue com o comando de teste apontando para a branch.
-metadata:
-  short-description: Corrige issues do SetupVibe no GitHub
 ---
 
 # Fix Issue — SetupVibe
 
 Workflow para corrigir issues reportadas em `promovaweb/setupvibe`.
 
+## Plataforma
+
+Esta é a versão Codex da skill.
+
+- Use `exec_command` para `gh`, `git`, validações e comandos de teste.
+- Use `rg` para localizar blocos e padrões nos scripts.
+- Use `apply_patch` para edições manuais.
+- Mantenha esta skill funcionalmente alinhada com `.claude/skills/fix-issue`.
+
 ## Invocação
 
-```
+```text
 /fix-issue <número>
 /fix-issue <número> comment
 ```
@@ -29,9 +36,9 @@ Workflow para corrigir issues reportadas em `promovaweb/setupvibe`.
 gh issue view <número> --repo promovaweb/setupvibe
 ```
 
-2. Anote o autor da issue (campo `author:`) — será usado no comentário final.
+1. Anote o autor da issue (campo `author:`) — será usado no comentário final.
 
-3. Identifique o(s) arquivo(s) afetado(s). Os candidatos principais são:
+2. Identifique o(s) arquivo(s) afetado(s). Os candidatos principais são:
 
 | Arquivo | Quando investigar |
 |---|---|
@@ -41,7 +48,7 @@ gh issue view <número> --repo promovaweb/setupvibe
 | `conf/tmux-*.conf` | Problema com tmux ou plugins |
 | `docs/` | Documentação incorreta ou ausente |
 
-4. Leia as seções relevantes dos scripts com Read ou Grep antes de propor qualquer mudança. **Nunca modifique código que não foi lido.**
+1. Leia as seções relevantes dos scripts com `rg` e `sed` antes de propor qualquer mudança. **Nunca modifique código que não foi lido.**
 
 ---
 
@@ -81,7 +88,7 @@ Antes de editar, responda:
 
 ## Fase 4: Aplicar a Correção
 
-1. Edite apenas o(s) arquivo(s) afetado(s) com a ferramenta Edit.
+1. Edite apenas o(s) arquivo(s) afetado(s) com `apply_patch`.
 2. Respeite o bloco OS correto (`IS_MACOS` vs `else` para Linux).
 3. Siga os padrões de `user_do` e `sys_do` já estabelecidos no script.
 4. Não adicione tratamento de erro para cenários impossíveis — confie nas garantias do script.
@@ -135,7 +142,7 @@ Quando o código estiver pronto, informe o usuário com este modelo:
 
 **Pronto para revisão.** Para postar o comentário na issue e avisar o reporter, execute:
 
-```
+```text
 /fix-issue <número> comment
 ```
 
@@ -196,8 +203,6 @@ EOF
 Substitua `<autor>` pelo login do usuário que abriu a issue (campo `author:` lido na Fase 1) e `<número>` pelo número da issue.
 
 ---
-
-
 
 ---
 

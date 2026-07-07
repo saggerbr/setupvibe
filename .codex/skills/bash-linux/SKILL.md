@@ -1,14 +1,20 @@
 ---
 name: bash-linux
 description: Bash/Linux terminal patterns. Critical commands, piping, error handling, scripting. Use when working on macOS or Linux systems.
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 ---
 
 # Bash Linux Patterns
 
 > Essential patterns for Bash on Linux/macOS.
 
----
+## Platform Notes
+
+This is the Codex version of the skill.
+
+- Prefer `rg` over `grep` for repository search.
+- Use `exec_command` for terminal commands.
+- Use `apply_patch` for manual file edits.
+- Keep this skill functionally aligned with `.claude/skills/bash-linux`.
 
 ## 1. Operator Syntax
 

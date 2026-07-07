@@ -36,9 +36,6 @@ spinit my-project
 # Initialize in the current directory with Claude
 spci
 
-# Initialize in the current directory with Gemini
-spgi
-
 # Initialize in the current directory with Copilot
 spkpi
 ```
@@ -69,7 +66,7 @@ specify init <PROJECT_NAME> [options]
 
 | Option | Description |
 |---|---|
-| `--ai <agent>` | AI agent to use: `claude`, `copilot`, `gemini`, `codebuddy`, `pi` |
+| `--ai <agent>` | AI agent to use: `claude`, `copilot`, `codebuddy`, `pi` |
 | `--script <type>` | Script type: `sh` (Bash) or `ps` (PowerShell) |
 | `--here` | Initialize in the current directory instead of a new folder |
 | `--offline` | Use bundled assets without fetching from the network |
@@ -96,7 +93,6 @@ These aliases are available after running SetupVibe Desktop on macOS or Linux.
 | `spcheck` | `specify check` | Verifica dependências instaladas |
 | `sphere` | `specify init --here` | Inicializa SDD no diretório atual |
 | `spci` | `specify init --here --ai claude` | Inicia projeto SDD com Claude Code |
-| `spgi` | `specify init --here --ai gemini` | Inicia projeto SDD com Gemini CLI |
 | `spkpi` | `specify init --here --ai copilot` | Inicia projeto SDD com GitHub Copilot |
 | `spup` | `uv tool upgrade specify-cli` | Atualiza o Spec-Kit |
 
@@ -145,7 +141,6 @@ Use `/speckit.implement` or work task by task with your AI agent, referencing th
 |---|---|---|
 | Claude Code | `--ai claude` | Default recommendation for SetupVibe users |
 | GitHub Copilot | `--ai copilot` | Requires Copilot subscription |
-| Gemini CLI | `--ai gemini` | Free tier available |
 | CodeBuddy | `--ai codebuddy` | Tencent Cloud AI assistant |
 | Pi | `--ai pi` | Inflection AI assistant |
 

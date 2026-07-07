@@ -9,9 +9,16 @@ metadata:
 
 Workflow para corrigir issues reportadas em `promovaweb/setupvibe`.
 
+## Plataforma
+
+Esta é a versão Claude Code da skill.
+
+- Use `Read`, `Grep`, `Edit` e `Bash` para investigar, corrigir e validar.
+- Mantenha esta skill funcionalmente alinhada com `.codex/skills/fix-issue`.
+
 ## Invocação
 
-```
+```text
 /fix-issue <número>
 /fix-issue <número> comment
 ```
@@ -29,9 +36,9 @@ Workflow para corrigir issues reportadas em `promovaweb/setupvibe`.
 gh issue view <número> --repo promovaweb/setupvibe
 ```
 
-2. Anote o autor da issue (campo `author:`) — será usado no comentário final.
+1. Anote o autor da issue (campo `author:`) — será usado no comentário final.
 
-3. Identifique o(s) arquivo(s) afetado(s). Os candidatos principais são:
+2. Identifique o(s) arquivo(s) afetado(s). Os candidatos principais são:
 
 | Arquivo | Quando investigar |
 |---|---|
@@ -41,7 +48,7 @@ gh issue view <número> --repo promovaweb/setupvibe
 | `conf/tmux-*.conf` | Problema com tmux ou plugins |
 | `docs/` | Documentação incorreta ou ausente |
 
-4. Leia as seções relevantes dos scripts com Read ou Grep antes de propor qualquer mudança. **Nunca modifique código que não foi lido.**
+1. Leia as seções relevantes dos scripts com Read ou Grep antes de propor qualquer mudança. **Nunca modifique código que não foi lido.**
 
 ---
 
@@ -135,7 +142,7 @@ Quando o código estiver pronto, informe o usuário com este modelo:
 
 **Pronto para revisão.** Para postar o comentário na issue e avisar o reporter, execute:
 
-```
+```text
 /fix-issue <número> comment
 ```
 
@@ -196,8 +203,6 @@ EOF
 Substitua `<autor>` pelo login do usuário que abriu a issue (campo `author:` lido na Fase 1) e `<número>` pelo número da issue.
 
 ---
-
-
 
 ---
 

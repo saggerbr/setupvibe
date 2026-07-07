@@ -119,7 +119,6 @@ The version number is defined at the top of both `desktop.sh` and `server.sh`. *
 - `README.md` (root project overview)
 - `AGENTS.md` (project overview)
 - `CLAUDE.md` (project overview)
-- `GEMINI.md` (project overview)
 - All `README.md` files in the `docs/` directory and its subfolders.
 - Any other documentation referring to the current version.
 
@@ -131,13 +130,22 @@ The linting configuration is in [`.markdownlint.json`](.markdownlint.json) at th
 
 Use the `/markdown-format` skill to verify and apply these rules across all Markdown files.
 
-## AI Context File Synchronization
+## AI Context and Skill Synchronization
 
-**`AGENTS.md`, `CLAUDE.md`, and `GEMINI.md` are the three primary AI context files for this project.** They must always be kept in sync with each other.
+**`AGENTS.md` and `CLAUDE.md` are the two primary AI context files for this project.** They must always be kept in sync with each other for shared project rules.
 
-### Rule
+### Context Rule
 
-Whenever any one of these three files is modified — to add a new convention, update architecture information, change a rule, or correct an error — the **same change must be applied to the other two files** before the task is considered complete.
+Whenever either file is modified — to add a new convention, update architecture information, change a rule, or correct an error — the **same shared change must be applied to the other file** before the task is considered complete.
+
+### Skill Rule
+
+Codex and Claude maintain separate skill folders:
+
+- `.codex/skills` — Codex-specific skills using Codex terminology, tools, and workflows.
+- `.claude/skills` — Claude-specific skills using Claude Code terminology, tools, and workflows.
+
+Whenever a skill is added, removed, renamed, or materially changed in one folder, the equivalent skill must be updated in the other folder. The workflows should stay functionally aligned, but platform-specific instructions must remain native to each agent.
 
 ### Scope
 
@@ -148,10 +156,13 @@ This synchronization rule covers:
 - Key scripting patterns and conventions
 - Versioning policy (the list of files to update)
 - Markdown standards reference
+- Skill inventory and cross-agent skill compatibility rules
 - Any new global rule or policy added to one file
 
 ### What is NOT synchronized
 
 Each file may contain sections specific to its target agent (tool-specific invocation syntax, skill references, etc.). Those sections are intentionally different and must not be overwritten.
+
+No third AI agent context is maintained for this repository. Do not add extra agent context files, skill folders, or synchronization requirements unless the project explicitly adopts that agent.
 
 ---
