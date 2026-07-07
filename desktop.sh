@@ -636,11 +636,18 @@ step_3() {
         fi
         
         sys_do apt-get update -qq
-        echo "Installing PHP 8.4 & Extensions..."
+        echo "Installing PHP 8.4 & Core Extensions..."
         sys_do apt-get install -y php8.4 php8.4-cli php8.4-common php8.4-dev \
-            php8.4-curl php8.4-mbstring php8.4-xml php8.4-zip php8.4-bcmath php8.4-intl \
-            php8.4-mysql php8.4-pgsql php8.4-sqlite3 php8.4-gd php8.4-imagick \
-            php8.4-redis php8.4-mongodb php8.4-yaml php8.4-xdebug
+            php8.4-curl php8.4-mbstring php8.4-xml php8.4-bcmath \
+            php8.4-mysql php8.4-pgsql php8.4-sqlite3
+
+        echo "Installing PHP 8.4 Optional Extensions..."
+        for _ext in php8.4-zip php8.4-intl php8.4-gd php8.4-imagick \
+                    php8.4-redis php8.4-mongodb php8.4-yaml php8.4-xdebug; do
+            sys_do apt-get install -y "$_ext" 2>/dev/null \
+                || echo -e "${YELLOW}⚠ Optional extension $_ext not available on this distro, skipping.${NC}"
+        done
+        unset _ext
 
 
         echo "Persisting COMPOSER_ALLOW_SUPERUSER=1..."
